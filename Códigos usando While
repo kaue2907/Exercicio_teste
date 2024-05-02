@@ -1,250 +1,83 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyM2yUgpbTt56cYRSTES+3cK",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/kaue2907/Exercicio_teste/blob/main/C%C3%B3digos%20usando%20While\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
         "Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações."
-      ],
-      "metadata": {
-        "id": "FI5-rKbjbqz1"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "nome = (input(\"Digite o nome de usuário: \"))\n",
-        "senha = (input(\"Digite a senha: \"))\n",
-        "while senha == nome:\n",
-        "  senha = (input(\"A senha não pode ser igual ao nome de usuário\"))\n",
-        "print(\"bem-vindo\")"
-      ],
-      "metadata": {
-        "id": "xPal2CWHbqV6"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+    
+        nome = (input("Digite o nome de usuário: "))
+        senha = (input("Digite a senha: "))
+        while senha == nome:
+          senha = (input("A senha não pode ser igual ao nome de usuário\"))
+        print(\"bem-vindo")
+
+
         "Escreva um programa que conte de 1 a 10 e imprima cada número."
-      ],
-      "metadata": {
-        "id": "vXIxSwrab6Pn"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "contador = 1\n",
-        "while contador <= 10:\n",
-        "  print(f\"numeros * {contador}\")\n",
-        "  contador += 1"
-      ],
-      "metadata": {
-        "id": "UF4-Bbnwb6Bw"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
-        "Escreva um programa que imprima os números pares de 1 a 20."
-      ],
-      "metadata": {
-        "id": "qahoimU1cBGf"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "contador = 2\n",
-        "while contador <= 20:\n",
-        "  print(f\"numeros * {contador}\")\n",
-        "  contador += 2"
-      ],
-      "metadata": {
-        "id": "_Jm2aU43cA7J"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+      
+        contador = 1
+        while contador <= 10:
+          print(f"numeros * {contador}")
+          contador += 1"
+
+      
+       "Escreva um programa que imprima os números pares de 1 a 20."
+    
+        contador = 2
+        while contador <= 20:
+          print(f"numeros * {contador}")
+          contador += 2
+    
+      
         "Escreva um programa que solicite ao usuário que insira um número e, em seguida, imprima todos os números de 1 até esse número."
-      ],
-      "metadata": {
-        "id": "AYXy5IadcHVz"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "numero = int(input(\"Digite um número\"))\n",
-        "contador = 1\n",
-        "while contador <= numero:\n",
-        "  print(f\"numeros * {contador}\")\n",
-        "  contador += 1"
-      ],
-      "metadata": {
-        "id": "7oibLMwHcHOT"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+      
+        numero = int(input("Digite um número"))
+        contador = 1
+        while contador <= numero:
+          print(f"numeros * {contador}")
+          contador += 1
+
+
         "Escreva um programa que solicite ao usuário que insira um número e, em seguida, imprima todos os números pares de 2 até esse número."
-      ],
-      "metadata": {
-        "id": "gPuUz2jocMcI"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "numero = int(input(\"Digite um número\"))\n",
-        "contador = 2\n",
-        "while contador <= numero:\n",
-        "  print(f\"numeros * {contador}\")\n",
-        "  contador += 2"
-      ],
-      "metadata": {
-        "id": "gAwaTpaycMSI"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+     
+        numero = int(input("Digite um número"))
+        contador = 2
+        while contador <= numero:
+          print(f"numeros * {contador}")
+          contador += 2
+
+
         "Escreva um programa que solicite ao usuário que insira um número e, em seguida, imprima a tabuada desse número até 10."
-      ],
-      "metadata": {
-        "id": "cY99pTiqcR_Q"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "numero = int(input(\"Digite um número\"))\n",
-        "contador = 1\n",
-        "while contador <= 10:\n",
-        "  resultado = numero * contador\n",
-        "  print(f\"{numero} X {contador} = {resultado}\")\n",
-        "  contador += 1"
-      ],
-      "metadata": {
-        "id": "f2mvl3nJcR26"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+   
+        numero = int(input("Digite um número"))
+        contador = 1
+        while contador <= 10:
+          resultado = numero * contador
+          print(f"{numero} X {contador} = {resultado}")
+          contador += 1
+
+
         "Escreva um programa que solicite ao usuário que insira uma senha. O programa deve continuar solicitando a senha até que o usuário insira a senha correta."
-      ],
-      "metadata": {
-        "id": "T3OjE2jtcXQq"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "senha = int(input(\"Digite a senha: \"))\n",
-        "senha_correta = 1234\n",
-        "while senha != senha_correta:\n",
-        "  senha = int(input(\"Digite a senha correta: \"))\n",
-        "print(\"bem-vindo\")"
-      ],
-      "metadata": {
-        "id": "zIklzH2UcXCs"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+     
+        senha = int(input("Digite a senha: "))
+        senha_correta = 1234
+        while senha != senha_correta:
+          senha = int(input("Digite a senha correta: "))
+        print("bem-vindo")
+
+
         "Escreva um programa que solicite ao usuário que insira números até que ele insira o número 0. Em seguida, imprima a soma de todos os números inseridos."
-      ],
-      "metadata": {
-        "id": "7iyfGiHyOsAi"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "soma = 0\n",
-        "print(\"Insira Alguns Números. Insira 0 Para Terminar.\")\n",
-        "numero = float(input(\"Digite um Número: \"))\n",
-        "while numero != 0:\n",
-        "    soma += numero\n",
-        "    numero = float(input(\"Digite um número: \"))\n",
-        "print(\"A soma Dos Números é:\", soma)"
-      ],
-      "metadata": {
-        "id": "XI1mQPYfOrd5"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+
+        soma = 0
+        print("Insira Alguns Números. Insira 0 Para Terminar.")
+        numero = float(input("Digite um Número: "))
+        while numero != 0:
+            soma += numero
+            numero = float(input("Digite um número: "))
+        print("A soma Dos Números é:", soma)
+
+
         "Escreva um programa que solicite ao usuário que insira números até que ele insira um número negativo. Em seguida, imprima o maior número inserido."
-      ],
-      "metadata": {
-        "id": "xOtEp88dbAag"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "print(\"Digite Alguns Números. Digite um Número Negativo Para Terminar.\")\n",
-        "numero = float(input(\"Digite um Número. Digite um Número Negativo Para Terminar: \"))\n",
-        "maiornumero = numero\n",
-        "while numero >= 0:\n",
-        "    if numero > maiornumero:\n",
-        "        maiornumero = numero\n",
-        "    numero = float(input(\"Digite um Número. Digite um Número Negativo Para Terminar: \"))\n",
-        "print(\"O Maior Número é:\", maiornumero)"
-      ],
-      "metadata": {
-        "id": "Nc0Lt5Dba_8Q"
-      },
-      "execution_count": null,
-      "outputs": []
-    }
-  ]
-}
+ 
+        print("Digite Alguns Números. Digite um Número Negativo Para Terminar.")
+        numero = float(input("Digite um Número. Digite um Número Negativo Para Terminar: "))
+        maiornumero = numero
+        while numero >= 0:
+            if numero > maiornumero:
+                maiornumero = numero
+            numero = float(input("Digite um Número. Digite um Número Negativo Para Terminar: "))
+        print("O Maior Número é:", maiornumero)
