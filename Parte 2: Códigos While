@@ -1,61 +1,15 @@
-{
-  "nbformat": 4,
-  "nbformat_minor": 0,
-  "metadata": {
-    "colab": {
-      "provenance": [],
-      "authorship_tag": "ABX9TyMVeCmLZ3vEMXfIZkP1Mx9Y",
-      "include_colab_link": true
-    },
-    "kernelspec": {
-      "name": "python3",
-      "display_name": "Python 3"
-    },
-    "language_info": {
-      "name": "python"
-    }
-  },
-  "cells": [
-    {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/kaue2907/Exercicio_teste/blob/main/Parte%202%3A%20C%C3%B3digos%20While\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
-        "Faça um programa que calcule e mostre a média aritmética de N notas."
-      ],
-      "metadata": {
-        "id": "S7G3TCkbhINY"
-      }
-    },
-    {
-      "cell_type": "code",
-      "execution_count": null,
-      "metadata": {
-        "id": "T0Fdcof6gXP6"
-      },
-      "outputs": [],
-      "source": [
-        "n = int(input(\"Digite quantas notas você deseja somar: \"))\n",
-        "total = 0\n",
-        "contador = 0\n",
-        "while contador < n:\n",
-        "  nota = float(input(\"Digite a nota: \"))\n",
-        "  total += nota\n",
-        "  contador += 1\n",
-        "  print(\"A soma das\", n ,\"notas é:\", total)"
-      ]
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+"Faça um programa que calcule e mostre a média aritmética de N notas."
+
+        n = int(input("Digite quantas notas você deseja somar: "))
+        total = 0\
+        contador = 0
+        while contador < n:
+          nota = float(input("Digite a nota: "))
+          total += nota
+          contador += 1
+          print("A soma das", n ,"notas é:", total)
+      
+
         "Um funcionário de uma empresa recebe aumento salarial anualmente.\n",
         "Sabe-se que: Esse funcionário foi contratado em 1995, com salário inicial de R$\n",
         "1.000,00; Em 1996 recebeu aumento de 1,5% sobre seu salário inicial; A partir de\n",
@@ -63,197 +17,110 @@
         "percentual do ano anterior. Faça um programa que determine o salário atual desse\n",
         "funcionário. Após concluir isto, altere o programa permitindo que o usuário digite o\n",
         "salário inicial do funcionário."
-      ],
-      "metadata": {
-        "id": "REctsEi-jh7_"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "salario = float(input(\"Dgite o salário inicial do funcionário em 1995: \"))\n",
-        "ano = 1995\n",
-        "ano_atual = int(input(\"Digite em que ano estamos: \"))\n",
-        "aumento = 1.5 / 100  # 1.5%\n",
-        "\n",
-        "while ano < ano_atual:\n",
-        "    ano += 1\n",
-        "    salario *= 1 + aumento\n",
-        "    aumento *= 2\n",
-        "\n",
-        "print(f\"O salario em {ano} é de R$ {salario:.2f}\")"
-      ],
-      "metadata": {
-        "id": "htY08cZOjhlF"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+
+        salario = float(input("Dgite o salário inicial do funcionário em 1995: "))
+        ano = 1995
+        ano_atual = int(input("Digite em que ano estamos: "))
+        aumento = 1.5 / 100  # 1.5%
+         
+        while ano < ano_atual:
+            ano += 1
+            salario *= 1 + aumento
+            aumento *= 2
+        
+        print(f"O salario em {ano} é de R$ {salario:.2f}")
+
+
         "Faça um programa que leia e valide as seguintes informações:\n",
         " Nome: maior que 3 caracteres;\n",
         " Idade: entre 0 e 150;\n",
         " Salário: maior que zero;\n",
         " Sexo: 'f' ou 'm';\n",
         " Estado Civil: 's', 'c', 'v', 'd';"
-      ],
-      "metadata": {
-        "id": "jxDj0P6UvBUS"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "nome = (input(\"Digite seu nome:\"))\n",
-        "while len(nome) < 3:\n",
-        " nome = (input(\"Digite o nome corretamnete: \"))\n",
-        " print(\"bem-vindo\")\n",
-        "\n",
-        "\n",
-        "idade = int(input(\"Digite sua idade: \"))\n",
-        "while idade < 0 or idade > 150:\n",
-        "  idade = int(input(\"Digite a idade correta: \"))\n",
-        "\n",
-        "\n",
-        "salario = int(input(\"Digite seu salário: \"))\n",
-        "while salario < 0:\n",
-        "  salario = int(input(\"Digite seu salario novamente: \"))\n",
-        "\n",
-        "\n",
-        "sexo = (input(\"Digite 'f' para Feminino ou 'm' para Masculino: \"))\n",
-        "while sexo != \"f\" and sexo != \"m\":\n",
-        "  print(\"Digite um sexo correspondente: \")\n",
-        "\n",
-        "if sexo == \"f\":\n",
-        "   print(\"feminino\")\n",
-        "\n",
-        "else:\n",
-        "   print(\"masculino\")\n",
-        "\n",
-        "\n",
-        "estado_civil = (input(\"Digite 's', 'c', 'v' ou 'd': \"))\n",
-        "while estado_civil != \"s\" and estado_civil != \"c\" and estado_civil != \"v\" and estado_civil != \"d\":\n",
-        "  print(\"Estado civil inválido\")\n",
-        "\n",
-        "if estado_civil == \"s\":\n",
-        "  print(\"solteiro\")\n",
-        "\n",
-        "elif estado_civil == \"c\":\n",
-        "  print(\"casado\")\n",
-        "\n",
-        "elif estado_civil == \"v\":\n",
-        "  print(\"viúvo\")\n",
-        "\n",
-        "else:\n",
-        "  print(\"divorciado\")"
-      ],
-      "metadata": {
-        "id": "z9DIzvyIz8or"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+
+        nome = (input("Digite seu nome:"))
+        while len(nome) < 3:
+         nome = (input("Digite o nome corretamnete: "))
+         print("bem-vindo")
+        idade = int(input("Digite sua idade: "))
+        while idade < 0 or idade > 150:\n",
+          idade = int(input("Digite a idade correta: "))
+        salario = int(input("Digite seu salário: "))
+        while salario < 0:
+          salario = int(input("Digite seu salario novamente: "))
+        sexo = (input("Digite 'f' para Feminino ou 'm' para Masculino: "))
+        while sexo != "f" and sexo != "m":
+          print("Digite um sexo correspondente: ")
+
+        if sexo == "f":
+           print("feminino")
+
+        else:
+           print("masculino")
+
+        estado_civil = (input("Digite 's', 'c', 'v' ou 'd': "))
+        while estado_civil != "s" and estado_civil != "c" and estado_civil != "v" and estado_civil != "d":
+          print("Estado civil inválido")
+        if estado_civil == "s":
+          print("solteiro")
+        elif estado_civil == "c":
+          print("casado")
+        elif estado_civil == "v":
+          print("viúvo")
+        else:
+          print("divorciado")
+
+
         "Supondo que a população de um país A seja da ordem de 80000 habitantes com\n",
         "uma taxa anual de crescimento de 3% e que a população de B seja 200000\n",
         "habitantes com uma taxa de crescimento de 1.5%. Faça um programa que calcule e\n",
         "escreva o número de anos necessários para que a população do país A ultrapasse\n",
         "ou iguale a população do país B, mantidas as taxas de crescimento."
-      ],
-      "metadata": {
-        "id": "a-V_viqnZCnv"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "A = 80000\n",
-        "taxacrescimentoA = 0.03\n",
-        "B = 200000\n",
-        "taxacrescimentoB = 0.015\n",
-        "anos = 0\n",
-        "while A < B:\n",
-        "    A *= 1 + taxacrescimentoA\n",
-        "    B *= 1 + taxacrescimentoB\n",
-        "    anos += 1\n",
-        "print(f\"Necessários {anos} Anos Para Que a População do País A Ultrapasse ou Iguale a População do País B: \")"
-      ],
-      "metadata": {
-        "id": "IW5AIxZIY4Fh"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+
+        A = 80000
+        taxacrescimentoA = 0.03
+        B = 200000
+        taxacrescimentoB = 0.015
+        anos = 0
+        while A < B:
+            A *= 1 + taxacrescimentoA
+            B *= 1 + taxacrescimentoB
+            anos += 1
+        print(f"Necessários {anos} Anos Para Que a População do País A Ultrapasse ou Iguale a População do País B: ")
+
+
         "Faça um programa que calcule o fatorial de um número inteiro fornecido pelo\n",
         "usuário. Ex.: 5!=5.4.3.2.1=120"
-      ],
-      "metadata": {
-        "id": "LcRirSAwa-6u"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "numero = int(input(\"Digite um número: \"))\n",
-        "if numero < 0:\n",
-        "    print(\"Não Existe Fatorial em Números Negativos.\")\n",
-        "elif numero == 0:\n",
-        "    print(\"O Fatorial de 0 é Sempre 1.\")\n",
-        "else:\n",
-        "    fatorial = 1\n",
-        "    fator = 1\n",
-        "    while fator <= numero:\n",
-        "        fatorial *= fator\n",
-        "        fator += 1\n",
-        "    print(f\"O fatorial de {numero} é {fatorial}.\")"
-      ],
-      "metadata": {
-        "id": "jiXxpzOpa9bv"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+
+        numero = int(input("Digite um número: "))
+        if numero < 0:
+            print("Não Existe Fatorial em Números Negativos.")
+        elif numero == 0:
+            print("O Fatorial de 0 é Sempre 1.")
+        else:
+            fatorial = 1
+            fator = 1
+            while fator <= numero:
+                fatorial *= fator
+                fator += 1
+            print(f"O fatorial de {numero} é {fatorial}.")
+
+
         "Faça um programa que solicite ao usuário números indefinidamente até que ele\n",
         "digite 0. Em seguida, o programa deve imprimir a média dos números digitados."
-      ],
-      "metadata": {
-        "id": "kjGpmfxYbC27"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "soma = 0\n",
-        "contador = 0\n",
-        "numero = input(\"Digite alguns números ou '0' para terminar: \")\n",
-        "while numero != '0':\n",
-        "    soma += float(numero)\n",
-        "    contador += 1\n",
-        "    numero = input(\"Digite alguns números ou '0' para terminar: \")\n",
-        "\n",
-        "if contador > 0:\n",
-        "    media = soma / contador\n",
-        "    print(\"A Média Dos Números é:\", media)"
-      ],
-      "metadata": {
-        "id": "L9NRPkm1bCTd"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+
+        soma = 0
+        contador = 0
+        numero = input("Digite alguns números ou '0' para terminar: ")
+        while numero != '0':
+            soma += float(numero)
+            contador += 1
+            numero = input("Digite alguns números ou '0' para terminar: ")
+        if contador > 0:
+            media = soma  contador
+            print("A Média Dos Números é:", media)
+
+
         "O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios de 1,99 e\n",
         "agora possui uma loja de conveniências. Faça um programa que implemente uma\n",
         "caixa registradora rudimentar.\n",
@@ -272,90 +139,59 @@
         " Total: R$ 9.00\n",
         " Dinheiro: R$ 20.00\n",
         " Troco: R$ 11.00"
-      ],
-      "metadata": {
-        "id": "M-mFr3Aow4KG"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "continuar = \"S\"\n",
-        "while continuar == \"S\" or continuar == \"s\":\n",
-        "    total = 0\n",
-        "    numproduto = 0\n",
-        "    precoproduto = float(input(f\"Produto {numproduto + 1} (digite 0 para finalizar): \"))\n",
-        "    while precoproduto != 0:\n",
-        "        total += precoproduto\n",
-        "        numproduto += 1\n",
-        "        precoproduto = float(input(f\"Produto {numproduto + 1} (digite 0 para finalizar): \"))\n",
-        "    print(f\"Total: R$ {total:.2f}\")\n",
-        "    dinheiro = float(input(\"Dinheiro: \"))\n",
-        "    troco = dinheiro - total\n",
-        "    print(f\"Troco: R$ {troco:.2f}\")\n",
-        "    outracompra = input(\"Deseja Comprar Outra Coisa? (S/N): \")\n",
-        "\n",
-        "    if outracompra == 'N' or outracompra == 'n':\n",
-        "        print(\"Tenha um Bom Dia!\")\n",
-        "        continuar = 'N'"
-      ],
-      "metadata": {
-        "id": "T_K3U6SNw3sp"
-      },
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "markdown",
-      "source": [
+
+        continuar = "S"
+        while continuar == "S" or continuar == "s":
+            total = 0
+            numproduto = 0
+            precoproduto = float(input(f"Produto {numproduto + 1} (digite 0 para finalizar): "))
+            while precoproduto != 0:
+                total += precoproduto
+                numproduto += 1
+                precoproduto = float(input(f"Produto {numproduto + 1} (digite 0 para finalizar): "))
+            print(f"Total: R$ {total:.2f}")
+            dinheiro = float(input("Dinheiro: "))
+            troco = dinheiro - total
+            print(f"Troco: R$ {troco:.2f}")
+            outracompra = input("Deseja Comprar Outra Coisa? (S/N): ")
+     
+            if outracompra == 'N' or outracompra == 'n':
+                print("Tenha um Bom Dia!")
+                continuar = 'N'
+
+
         "O cardápio de uma lanchonete é o seguinte:\n",
         "Especificação Código Preço\n",
         " Cachorro Quente 100 R$ 1,20\n",
         " Bauru Simples 101 R$ 1,30\n",
-        " Bauru com ovo 102 R$ 1,50\n",
-        " Hambúrguer 103 R$ 1,20\n",
-        " Cheeseburguer 104 R$ 1,30\n",
-        " Refrigerante 105 R$ 1,00\n",
-        "Faça um programa que leia o código dos itens pedidos e as quantidades desejadas.\n",
-        "Calcule e mostre o valor a ser pago por item (preço * quantidade) e o total geral do\n",
+        " Bauru com ovo 102 R$ 1,50
+        " Hambúrguer 103 R$ 1,20
+        " Cheeseburguer 104 R$ 1,30
+        " Refrigerante 105 R$ 1,00
+        "Faça um programa que leia o código dos itens pedidos e as quantidades desejadas.
+        "Calcule e mostre o valor a ser pago por item (preço * quantidade) e o total geral do
         "pedido. Considere que o cliente deve informar quando o pedido deve ser encerrado."
-      ],
-      "metadata": {
-        "id": "4_vwM6CsxRCp"
-      }
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "cardapio = {\n",
-        "    100: {\"nome\": \"Cachorro Quente\", \"preco\": 1.20},\n",
-        "    101: {\"nome\": \"Bauru Simples\", \"preco\": 1.30},\n",
-        "    102: {\"nome\": \"Bauru com Ovo\", \"preco\": 1.50},\n",
-        "    103: {\"nome\": \"Hambúrguer\", \"preco\": 1.20},\n",
-        "    104: {\"nome\": \"Cheeseburguer\", \"preco\": 1.30},\n",
-        "    105: {\"nome\": \"Refrigerante\", \"preco\": 1.00}\n",
-        "}\n",
-        "\n",
-        "pedidos = 0\n",
-        "code = int(input(\"Digite o código do item (ou 0 para encerrar o pedido): \"))\n",
-        "while code != 0:\n",
-        "    if code in cardapio:\n",
-        "        quantidade = int(input(\"Digite a quantidade desejada: \"))\n",
-        "        item = cardapio[code]\n",
-        "        totalitem = item[\"preco\"] * quantidade\n",
-        "        pedidos += totalitem\n",
-        "        print(f\"{quantidade} x {item['nome']}: R$ {totalitem:.2f}\")\n",
-        "    else:\n",
-        "        print(\"Código inválido. Por favor, digite um código válido.\")\n",
-        "    code = int(input(\"Digite o código do item (ou 0 para encerrar o pedido): \"))\n",
-        "\n",
-        "print(f\"Total do pedido: R$ {pedidos:.2f}\")"
-      ],
-      "metadata": {
-        "id": "v7stmQJExQqF"
-      },
-      "execution_count": null,
-      "outputs": []
-    }
-  ]
-}
+   
+        cardapio = {
+            100: {"nome": "Cachorro Quente", "preco": 1.20},
+            101: {"nome": "Bauru Simples", "preco": 1.30},
+            102: {"nome": "Bauru com Ovo", "preco": 1.50},
+            103: {"nome": "Hambúrguer", "preco": 1.20},
+            104: {"nome": "Cheeseburguer", "preco": 1.30},
+            105: {"nome": "Refrigerante", "preco": 1.00}
+           } 
+             
+        pedidos = 0
+        code = int(input("Digite o código do item (ou 0 para encerrar o pedido): "))
+        while code != 0:
+            if code in cardapio:
+                quantidade = int(input("Digite a quantidade desejada: "))
+                item = cardapio[code]
+                totalitem = item["preco"] * quantidade
+                pedidos += totalitem
+                print(f"{quantidade} x {item['nome']}: R$ {totalitem:.2f}")
+            else:
+                print("Código inválido. Por favor, digite um código válido.")
+            code = int(input("Digite o código do item (ou 0 para encerrar o pedido): "))
+      
+        print(f"Total do pedido: R$ {pedidos:.2f}")
